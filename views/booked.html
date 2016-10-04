@@ -1,10 +1,10 @@
 <!-- Use the ng-style directive to change the background to the image link on the data object we are getting from the controller
       you will need to write a function that checks the url params and then loops over the data object in the service and then returns
       the object the matches the id being passed in the url params. Do this in your controller -->
-<section class="booked-main-container" >
+<section class="booked-main-container" ng-style="background">
 
-    <h1>Thanks for trusting us with your trip to <br>   <!-- Data bind the city name here --> </h1>
+    <h1>Thanks for trusting us with your trip to <br> {{travelInfo.city}}  <!-- Data bind the city name here --> </h1>
 
     <!--The ui-sref should be pointing to the packages state -->
-    <button> VIEW MORE PACKAGES </button>
+    <button ui-sref="packages"> VIEW MORE PACKAGES </button>
 </section>

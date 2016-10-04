@@ -32,11 +32,11 @@
             <nav>
                 <ul>
                     <!--Navigation section, this is where you will put your ui-sref's so you can naviagte to different views -->
-                    <li><a>Locations</a></li>
-                    <li><a>Packages</a></li>
+                    <li><a ui-sref="locations">Locations</a></li>
+                    <li><a ui-sref='packages'>Packages</a></li>
                     <li><a><img src="./img/DevCircleWhite.svg" alt="DevMountain Logo"></a></li>
-                    <li><a>About</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a ui-sref='home'>About</a></li>
+                    <li><a ui-sref='contact'>Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -47,7 +47,7 @@
 
 <!-- Here we are placing the ui-view tag this is where our views will be injected when we change routes. -->
 
-    <ui-view></ui-view>
+    <ui-view class="ng-scope"></ui-view>
 
 
 </main>
@@ -58,6 +58,16 @@
 
 <!--Our Custom Script Files-->
 <script src="./js/app.js"></script>
+<script src="js/services/mainService.js"></script>
+
+<script src="js/controllers/bookedCtrl.js"></script>
+<script src="js/controllers/locationsCtrl.js"></script>
+
+<script src="js/controllers/packagesCtrl.js"></script>
+
+
+
+
 
 
 </body>

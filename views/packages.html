@@ -1,17 +1,17 @@
-<section class="packages-main">
+<section class="packages-main" >
     <!-- This is where we need to repeat over our data that we are getting from our controller. The controller is getting the data from the service
      If you haven't made teh controller do that now and include it on your state object in app.js-->
-    <section class="package-card">
+    <section class="package-card" ng-repeat="travel in getTravelInfo">
         <!-- Once we have the data we can use {{}} to bind that data to our view -->
         <!--Add the image link from the data here. Remember to put something in the alt tag, perhaps the name of the city-->
-        <img  alt="">
+        <img src ="{{travel.image}}"alt="{{travel.name}}">
         <!-- Now we can start to extract the data and bind it to our different elements here-->
-        <h6> <!--The city name goes here--> </h6>
-        <h1><!--The country name goes here--></h1>
-        <p><!--The description goes here--></p>
+        <h6> {{travel.city}}<!--The city name goes here--> </h6>
+        <h1>{{travel.country}}<!--The country name goes here--></h1>
+        <p>{{travel.desc}}<!--The description goes here--></p>
 
         <!--You will need to make the ui-sref work. It should point to the booked state. If you look at your app.js the booked state
        is expecting an id to be passed along You can get that id from the data object that we are repeating over -->
-        <button>Book Now</button>
+        <button ui-sref="booked({id:{{travel.id}}})">Book Now</button>
     </section>
 </section>
