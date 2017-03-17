@@ -76,7 +76,7 @@ Once you feel VERY comfortable with the existing codebase, move on to the next s
 In this step, we need to set up five more state views in our app.js.
 Go ahead and add the following state views.
 
-* `/packages` - For all packages
+* `/packages/:country` - For all packages
 * `/locations` - For all locations
 * `/booked/:id` - Used to book a specific package.
 * `/adventurers/` - This is going to be a sub route of the home page
@@ -142,7 +142,7 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
                 templateUrl: "../views/contact.html"
             })
             .state('packages',{
-                url:'/packages',
+                url:'/packages/:country',
                 templateUrl: "../views/packages.html"
 
             })
@@ -158,17 +158,6 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
             });
 ```
 
-### Setup the templates
-
-####
-
-Now that our templates and controllers have been injected into each of the states, we need to add some markup to the templates to get them to work.
-The templates we need to make changes to are the booked.html,locations.html and the packages.html. Open up those files and you will see comments guiding you through the steps
-
-Go ahead to your browser and test your content. Now that we have created templates that are linked to the state config, we should be able to see them appear when the url has an appropriate extension.
-For example use the following url extension to test the packages page : http://localhost:8080/#/packages.
-
-If everything works correctly, go through the index.html file and the template files, and add any ui-sref attributes that would be necessary to connect to the different views.
 
 ### Controller Setup
 
@@ -185,7 +174,7 @@ Create three new files, which are listed below, and place them in the controller
 
 Make sure that $scope and mainSrv are injected into each of the controllers. And before we get started, let's make sure that the controllers have been added to your index.html in a script source tag.
 
-### Add controller to state object
+
 
 #### Add controller to state object
 
@@ -210,7 +199,7 @@ Now when you navigate to a view the router will know what controller it needs to
                 templateUrl: "../views/contact.html"
             })
             .state('packages',{
-                url:'/packages',
+                url:'/packages/:country',
                 templateUrl: "../views/packages.html",
                 controller: 'packagesCtrl'
             })
@@ -225,7 +214,6 @@ Now when you navigate to a view the router will know what controller it needs to
                 controller: 'locationsCtrl'
             });
 ```
-
 ### Test Controllers
 
 ####
@@ -233,12 +221,25 @@ Now when you navigate to a view the router will know what controller it needs to
 Create a test variable in your controller called $scope.test and give it some value. In the associated template file that you created in the last step, put {{test}} somewhere in the file. Make sure that the value that you gave to $scope.test pops up on the view.
 
 
+### Setup the templates
+
+####
+
+Now that our templates and controllers have been injected into each of the states, we need to add some markup to the templates to get them to work.
+
+Go ahead to your browser and test your content. Now that we have created templates that are linked to the state config, we should be able to see them appear when the url has an appropriate extension.
+For example use the following url extension to test the packages page : http://localhost:8080/#/packages.
+
+If everything works correctly, go through the index.html file and the template files, and add any ui-sref attributes that would be necessary to connect to the different views. The templates we need to make changes to are the booked.html,locations.html and the packages.html. Open up those files and you will see comments guiding you through the steps
+
+
+
 ### Getting Data from service
 
 ####
 
 Now that we have tested the controllers and know they work we can get the data we need from the service
-We want to gain access to the travelInfo data that is present in our mainSrv by calling to the service through our controller.
+We want to gain access to the travelInfo and packageInfo data that is present in our mainSrv by calling to the service through our controllers.
 
 Go ahead and delete the test variables you made and create new $scope variables that are accessible in the html view and associate them with the data that was pulled from the service files.
 

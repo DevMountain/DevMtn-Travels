@@ -1,23 +1,22 @@
 <section class="locations-container">
-    <!-- This is where we need to repeat over our data that we are getting from our controller. The controller is getting the data from the service
-     If you haven't made the controller do that now and include it on your state object in app.js-->
+    <!-- This is where we need to repeat over our data that we are getting from our service via the controller . The controller should be getting the "travelInfo" data from the service. If you haven't made the controller, do that now and include it on your state object in app.js-->
     <section class="location-card" >
         <div class="image-container">
-            <!-- Once we have the data we can use {{}} to bind that data to our view -->
-            <!--Add the image link from the data here. Remember to put something in the alt tag, perhaps the name of the city-->
-            <img ng-src="" alt="">
+					<!-- In the controller get the data from "travelInfo" and assign it to $scope -->
+          <!-- Once we have the data we can use {{}} to bind that data to our view -->
+          <!--Add the image link from the data here. Remember to put something in the alt tag, perhaps the name of the Country-->
+          <img ng-src="" alt="">
         </div>
         <div class="location-inner-left">
             <!-- Now we can start to extract the data and bind it to our different elements here-->
-            <h6> <!--The city name goes here--> </h6>
             <h1><!--The country name goes here--></h1>
             <p><!--The description goes here--></p>
         </div>
         <div class="location-inner-right">
             <h3>Package Start At $<!--The package price goes here--></h3>
-            <!--You will need to make the ui-sref work. It should point to the booked state. If you look at your app.js the booked state
-       is expecting an id to be passed along. You can get that id from the data object that we are repeating over. The syntax for going to a route with params is "routename({param:paramValue})" -->
-            <button ui-sref="">Book Now</button>
+            <!--You will need to make the ui-sref work. It should point to the packages state. If you look at your app.js the packages state
+       is expecting a country name to be passed along. You can get that name from the data object that we are repeating over. The syntax for going to a route with params is "routename({param:paramValue})" -->
+            <button ui-sref="">See country packages</button>
         </div>
     </section>
 </section>
