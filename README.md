@@ -1,3 +1,5 @@
+<img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250" align="right">
+
 ## DevMtn-Travels
 
 ### Objective
@@ -267,19 +269,15 @@ Now that we have the $state.params "id" we can loop over the data we are getting
 * Filter http://jsfiddle.net/WS8gS/1/
 * http://docs.angularjs.org/guide/concepts
 
-
-
-### Contributions
-
-####
+## Contributions
 
 If you see a problem or a typo, please fork, make the necessary changes, and create a pull request so we can review your changes and merge them into the master repo and branch.
 
+## Copyright
 
-### Copyright
+© DevMountain LLC, 2017. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
 
-####
+<p align="center">
+<img src="https://s3.amazonaws.com/devmountain/readme-logo.png" width="250">
+</p>
 
-© DevMountain LLC, 2016. Unauthorized use and/or duplication of this material without express and written permission from DevMountain, LLC is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to DevMountain with appropriate and specific direction to the original content.
-
-<img src="https://devmounta.in/img/logowhiteblue.png" width="250">
