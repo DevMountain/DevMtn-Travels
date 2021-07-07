@@ -103,12 +103,10 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
             })
             .state('adventurers',{
                 url:,
-                parent:,
                 templateUrl:
             })
             .state('contact',{
                 url:'',
-                parent:'',
                 templateUrl: ""
             })
             .state('packages',{
@@ -135,12 +133,10 @@ The contact.html and the about-adventurers.html are both sub routes to the home 
             })
             .state('adventurers',{
                 url:'/adventurers',
-                parent:'home',
                 templateUrl: "../views/about-adventurers.html"
             })
             .state('contact',{
                 url:'/contact',
-                parent:'home',
                 templateUrl: "../views/contact.html"
             })
             .state('packages',{
@@ -192,12 +188,10 @@ Now when you navigate to a view the router will know what controller it needs to
             })
             .state('adventurers',{
                 url:'/adventurers',
-                parent:'home',
                 templateUrl: "../views/about-adventurers.html"
             })
             .state('contact',{
                 url:'/contact',
-                parent:'home',
                 templateUrl: "../views/contact.html"
             })
             .state('packages',{
